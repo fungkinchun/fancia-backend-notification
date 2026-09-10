@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/internal")
+@RequestMapping("/internal/v1")
 @Hidden
 @Tag(name = "Notifications Internal", description = "Internal notification endpoints for service-to-service calls")
 class NotificationInternalController(

@@ -9,7 +9,7 @@ import java.util.UUID
 
 @FeignClient(
     name = "user-internal-service",
-    path = "/internal",
+    path = "/internal/v1",
     configuration = [FeignConfig::class],
 )
 interface UserInternalClient {

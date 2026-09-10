@@ -17,9 +17,9 @@ class SecurityConfiguration {
     fun securityFilterChain(http: HttpSecurity): SecurityFilterChain {
         http.authorizeHttpRequests { customizer ->
             customizer.requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-            customizer.requestMatchers(HttpMethod.POST, "/internal/push").permitAll()
-            customizer.requestMatchers(HttpMethod.POST, "/internal/emails/welcome").permitAll()
-            customizer.requestMatchers(HttpMethod.POST, "/internal/emails/password-reset").permitAll()
+            customizer.requestMatchers(HttpMethod.POST, "/internal/v1/push").permitAll()
+            customizer.requestMatchers(HttpMethod.POST, "/internal/v1/emails/welcome").permitAll()
+            customizer.requestMatchers(HttpMethod.POST, "/internal/v1/emails/password-reset").permitAll()
             customizer.requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
             customizer.requestMatchers("/actuator/**").permitAll()
             customizer.anyRequest().authenticated()
