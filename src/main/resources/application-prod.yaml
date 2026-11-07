@@ -5,10 +5,7 @@ server:
 spring:
   config:
     import:
-      - aws-secretsmanager:${ENV}/${PROJECT_NAME}/oauth2
-      - aws-secretsmanager:${ENV}/${PROJECT_NAME}/gis
-      - aws-secretsmanager:${ENV}/${PROJECT_NAME}/smtp
-      - aws-secretsmanager:${ENV}/${PROJECT_NAME}/firebase
+      - aws-secretsmanager:${ENV}/${PROJECT_NAME}/app
   security:
     oauth2:
       resourceserver:
